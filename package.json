@@ -13,9 +13,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:silent": "Browser=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cy:open": "cypress open",
+    "cypress": "start-server-and-test start:silent http://localhost:3000/ cy:open"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^8.5.0",
+    "start-server-and-test": "^1.14.0"
   }
 }
